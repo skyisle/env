@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/skyisle/html5'
+let g:netrw_dirhist_2='/Users/skyisle/.vim/bundle/syntastic/syntax_checkers/javascript'
+let g:netrw_dirhist_3='/Users/skyisle/Library/Application Support/Titanium/mobilesdk/osx/1.7.5/android/templates'
+let g:netrw_dirhist_4='/Users/skyisle/tmp/test5'
+let g:netrw_dirhist_5='/Users/skyisle/html5/views'
