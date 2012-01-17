@@ -8,7 +8,14 @@ fi
 
 export LANG=ko_KR.UTF-8
 
-PROMPT_COLOR='1;34'
+HOSTNAME=`hostname -s`
+if [ ${HOSTNAME} == 'abouts' ];
+then
+    PROMPT_COLOR='1;32'
+else
+    PROMPT_COLOR='1;34'
+fi
+
 export PS1="\[\033["$PROMPT_COLOR"m\]\u.\h:\w\$ \[\033[0m\]"
 
 #########################################################
