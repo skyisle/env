@@ -60,9 +60,11 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # homebrew
 export HOMEBREW_TEMP=/usr/local/tmp
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+
+if [ -f `brew --prefix`/etc/bash_completion  ]; then
+    . `brew --prefix`/etc/bash_completion 
 fi
+
 export PATH=/usr/local/bin:$PATH
 
 # set the number of open files to be 1024
