@@ -179,5 +179,10 @@ autocmd FileType javascript set sw=2 ts=2 sts=2 expandtab
 " CoffeeScript (tabs = 4, lines = 79)
 autocmd FileType coffee set sw=2 ts=2 sts=2
 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 let hangeul_enabled = 1
 
