@@ -184,5 +184,9 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+"Map NERDTree to \p
+nmap <silent> <Leader>p :NERDTreeToggle<CR>
+highlight Pmenu ctermbg=238 gui=bold
+
 let hangeul_enabled = 1
 
