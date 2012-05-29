@@ -74,5 +74,10 @@ export PS1="\[\033["$PROMPT_COLOR"m\]\u.\h:\w\$ \[\033[0m\]"
 stty intr "^c" erase "^?" susp "^z" kill "^u"
 alias lstree="ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
+export EDITOR=vim
 export TITANIUM_SDK="/Library/Application Support/Titanium"
 export ANDROID_SDK=$ANDROID_SDK_ROOT
+
+
+#ruby
+export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p125/bin
