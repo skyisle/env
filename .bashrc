@@ -16,7 +16,7 @@ else
     PROMPT_COLOR='1;34'
 fi
 
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/lib
+#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/lib
 
 
 #########################################################
@@ -28,7 +28,7 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # Go!
-export GOROOT=~/go/
+export GOROOT=/usr/local/Cellar/go/1.0.2
 export PATH=$GOROOT/bin:$PATH
 
 export PATH=~/bin:$PATH
@@ -81,3 +81,9 @@ export ANDROID_SDK=$ANDROID_SDK_ROOT
 
 #ruby
 export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p125/bin
+
+#this should be on last line!
+export PATH=~/bin/bin:$PATH
+
+#. ~/bin/nvm.sh 
+#nvm use 0.6.20

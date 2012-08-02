@@ -226,3 +226,8 @@ endfunction
 let pyindent_nested_paren="&sw*2"
 let pyindent_open_paren="&sw*2"
 " end of 'Indent Python in the Google way.'
+
+command Thtml set ft=html | execute "%!tidy -q -i -html"
+
+set rtp+=$GOROOT/misc/vim
+au BufRead,BufNewFile *.go set filetype=go
