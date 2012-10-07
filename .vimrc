@@ -1,5 +1,24 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'SuperTab-continued.'
+Bundle 'vim-jsbeautify'
+"Bundle 'skyisle/hangeul.vim'
+Bundle 'vim-scripts/python.vim'
+Bundle 'tfnico/vim-gradle'
+Bundle 'alderz/smali-vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'majutsushi/tagbar'
+
 " Enable pathogen bundle loader
-call pathogen#infect()
+"call pathogen#infect()
 " Recognize file types / set indent mode
 filetype plugin indent on
 
@@ -173,12 +192,13 @@ autocmd BufEnter *.isml set filetype=html
 autocmd BufEnter *.ejs set filetype=html
 
 " JavaScript (tabs = 4, lines = 79)
-autocmd FileType javascript set sw=2 ts=2 sts=2 expandtab
+autocmd FileType javascript set sw=4 ts=4 sts=4
 " autocmd FileType javascript set tw=79
 
 " CoffeeScript (tabs = 4, lines = 79)
-autocmd FileType coffee set sw=2 ts=2 sts=2
+autocmd FileType coffee set sw=4 ts=4 sts=4
 
+autocmd FileType python set sw=4 ts=4 sts=4
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
