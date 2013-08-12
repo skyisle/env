@@ -1,0 +1,17 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+    serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+    standup = log --since yesterday --author="skyisle" --pretty=oneline
+[color]
+	ui = true
+[user]
+	name = Alan Jeon
+	email = skyisle@gmail.com
+[core]
+	editor = /usr/bin/vim
+	autocrlf = input
