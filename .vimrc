@@ -16,6 +16,7 @@ Bundle 'tfnico/vim-gradle'
 Bundle 'alderz/smali-vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'majutsushi/tagbar'
+Bundle 'junegunn/seoul256.vim'
 
 " Enable pathogen bundle loader
 "call pathogen#infect()
@@ -204,6 +205,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+au BufNewFile,BufRead *.gradle setf groovy
+
 "Map NERDTree to \p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 highlight Pmenu ctermbg=238 gui=bold
@@ -251,3 +254,5 @@ command Thtml set ft=html | execute "%!tidy -q -i -html"
 
 set rtp+=$GOROOT/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
+
+colo seoul256
