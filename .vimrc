@@ -192,12 +192,13 @@ autocmd BufEnter *.json set filetype=javascript
 autocmd BufEnter *.isml set filetype=html
 autocmd BufEnter *.ejs set filetype=html
 
-" JavaScript (tabs = 4, lines = 79)
-autocmd FileType javascript set sw=4 ts=4 sts=4
+" JavaScript (tabs = 2, lines = 79)
+autocmd FileType javascript set sw=2 ts=2 sts=2
 " autocmd FileType javascript set tw=79
 
-" CoffeeScript (tabs = 4, lines = 79)
-autocmd FileType coffee set sw=4 ts=4 sts=4
+" CoffeeScript (tabs = 2, lines = 79)
+autocmd FileType coffee set sw=2 ts=2 sts=2
+
 
 autocmd FileType python set sw=4 ts=4 sts=4
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -206,6 +207,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 au BufNewFile,BufRead *.gradle setf groovy
+autocmd FileType groovy set sw=2 ts=2 sts=2
 
 "Map NERDTree to \p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>

@@ -7,11 +7,26 @@
 	last = log -1 HEAD
     serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
     standup = log --since yesterday --author="skyisle" --pretty=oneline
+    review = push origin HEAD:refs/for/master
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    update = pull origin master:master
 [color]
-	ui = true
+    ui = true
 [user]
-	name = Alan Jeon
-	email = skyisle@gmail.com
+    name = Alan Jeon
+    email = skyisle@gmail.com
 [core]
-	editor = /usr/bin/vim
-	autocrlf = input
+    editor = /usr/bin/vim
+    autocrlf = input
+    excludesfile = /Users/skyisle/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pager]
+    diff = diff-highlight | less
+[push]
+	default = simple
