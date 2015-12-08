@@ -8,7 +8,6 @@ clean:
 	mv ~/.bash_profile backup/
 
 install:
-	git submodule update --init --recursive
 	cp -R .vim ~/
 	cp .vimrc ~/
 	cp .bashrc ~/
